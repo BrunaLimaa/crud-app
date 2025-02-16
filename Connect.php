@@ -12,7 +12,7 @@
         exit();
     }
     else{
-        echo "Connected";
+        echo "Connected!";
     }
 
 
