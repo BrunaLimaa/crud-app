@@ -10,10 +10,7 @@
     if(!$connection){
         echo "Error: ".mysqli_connect_error();
         exit();
-    }
-    else{
-        echo "Connected!";
-    }
+    };
 
 
 ?>
