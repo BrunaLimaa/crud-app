@@ -47,24 +47,63 @@ include "connect.php";
             
 
             <!-- Modal -->  
+<form action="insert-std.php" method="POST">
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">ADD STUDENT</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        ...
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" class="form-control" name="name" placeholder="Enter Name">
+                    </div>
+                     <div class="form-group">   
+                        <label>Email</label>   
+                        <input type="text" class="form-control" name="email" placeholder="Enter Email">
+                    </div>
+                    <div class="form-group">    
+                        <label>Password</label>
+                        <input type="password" class="form-control" name="password" placeholder="Enter Password">
+                    </div>
+        
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <input type="submit"  name="add_students" class="btn btn-success" value="Save Changes">
       </div>
     </div>
   </div>
 </div>
+</form>
+
+<h6 class="error-message">
+    <?php
+        if(isset($_GET['message'])){
+            $message = $_GET['message'];
+            echo "<div id='message' class='alert alert-success'>".$message."</div>";
+        }
+    ?>
+
+
+</h6>
+<script>    
+    document.addEventListener("DOMContentLoaded", function(){
+        var message = document.getElementById('message');
+        if(message){
+          message.classList.add('show');
+
+            setTimeout(function(){
+                message.classList.remove('show');
+            }, 3000);
+        }
+    });
+</script>
+
+
 <?php include "footer.php"; ?>
               

@@ -1,7 +1,7 @@
 .title {
 
     font-size: 2em;
-    color: #b62727;
+    color: #47ad4c;
     background-color: black;
     font-weight: bold;
     padding: 3%;
@@ -39,3 +39,13 @@
     right: 15px;
     z-index: 2;
 }
+
+#message {
+    display: none;
+}
+
+#message.show {
+    display: flex;
+    justify-content: center;
+}
+
