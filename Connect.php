@@ -1,16 +1,17 @@
 <?php
-  
-    define("HOSTNAME", "localhost");
-    define("USERNAME", "root");
-    define("PASSWORD", "");
-    define("DATABASE", "students");
 
-    $connection = mysqli_connect(HOSTNAME, USERNAME, PASSWORD, DATABASE);
+define("HOSTNAME", "localhost");
+define("USERNAME", "root");
+define("PASSWORD", "");
+define("DATABASE", "students");
 
-    if(!$connection){
-        echo "Error: ".mysqli_connect_error();
-        exit();
-    };
+$connection = mysqli_connect(HOSTNAME, USERNAME, PASSWORD, DATABASE);
+
+if (!$connection) {
+    echo "Error: " . mysqli_connect_error();
+    exit();
+}
+;
 
 
 ?>
