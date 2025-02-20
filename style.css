@@ -1,7 +1,7 @@
 .title {
 
     font-size: 2em;
-    color: #47ad4c;
+    color: #cc38b8;
     background-color: black;
     font-weight: bold;
     padding: 3%;
@@ -10,7 +10,6 @@
     justify-content: center;
     
 }
-
 
 .box {
     
@@ -49,3 +48,6 @@
     justify-content: center;
 }
 
+#save-edit {
+    margin-top: 3%;
+}
