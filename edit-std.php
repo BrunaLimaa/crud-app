@@ -34,7 +34,7 @@ if (isset($_POST['edit-students'])) {
     if (!$result) {
         die('falha: ' . mysqli_error($connection));
     } else {
-        header('Location: index.php?message=Estudante editado com sucesso!');
+        header('Location: index.php?message=Student edited succesfully!');
 
 
     }
