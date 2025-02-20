@@ -10,13 +10,15 @@ include "connect.php";
 </div>
 
 
-<table class="table table-hover table-bordered table-striped">
+<table class="table table-hover table-bordered">
     <thead>
         <tr>
             <th>ID</th>
             <th>Name</th>
             <th>Email</th>
             <th>Password</th>
+            <th>EDIT</th>
+            <th>DELETE</th>
         </tr>
     </thead>
     <tbody>
@@ -32,6 +34,8 @@ include "connect.php";
                     <td><?php echo $row['name']; ?> </td>
                     <td><?php echo $row['email']; ?> </td>
                     <td><?php echo $row['password']; ?> </td>
+                    <td><a href="edit-std.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">EDIT</a></td>
+                    <td><a href="delete-std.php?id=<?php echo $row['id']; ?>" class="btn btn-danger">DELETE</a></td>
                 </tr>
 
                 <?php
